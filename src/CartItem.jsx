@@ -13,6 +13,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleContinueShopping = (e) => {
+    console.log("next on the list");
     e.preventDefault();
     if (onContinueShopping) {
       onContinueShopping();

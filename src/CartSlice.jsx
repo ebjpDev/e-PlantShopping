@@ -10,8 +10,6 @@ export const CartSlice = createSlice({
         const { name, image, cost } = action.payload;
         const numericCost = parseFloat(cost.replace('$', '')); // Convert cost to a number
         
-        console.log("Adding my item to cart:", { name, image, cost: numericCost });
-      
         const existingItem = state.items.find(item => item.name === name);
       
         if (existingItem) {
